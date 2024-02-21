@@ -1,0 +1,110 @@
+body,
+html {
+	font-family: 'Open sans', sans-serif;
+}
+.main-container {
+	height: 100%;
+	width: 35rem;
+}
+img {
+	cursor: pointer;
+}
+/*
+body {
+	background-color: lightgray;
+	display: grid;
+	grid-template-columns: auto;
+	justify-content: center;
+}
+
+
+
+.profile-image {
+	border-radius: 50%;
+	width: 3rem;
+}
+
+
+header > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.body-container {
+	margin-top: 2rem;
+	display: flex;
+	gap: 0.5rem;
+	align-items: flex-start;
+}
+
+.button {
+	width: 4.8rem;
+	height: 1.4rem;
+	margin-top: 0.3rem;
+	padding: 0.23rem 0;
+	border-radius: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.follow-button {
+	background-color: white;
+	border: 0.1rem solid #0a66c2;
+}
+
+.follow-button a {
+	color: #0a66c2;
+	font-weight: bold;
+	text-decoration: none;
+}
+.see-all-btn {
+	background-color: #0a66c2;
+	border: 0.5rem solid #0a66c2;
+}
+.see-all-btn a {
+	color: white;
+	font-weight: bolder;
+	text-decoration: none;
+}
+
+p {
+	margin: 0;
+}
+
+.info {
+	display: grid;
+	grid-template-columns: auto;
+	gap: 0.5rem;
+}
+*/
+h4 {
+	margin: 0;
+	font-size: 0.9rem;
+}
+
+span {
+	font-size: 0.7rem;
+	opacity: 0.9;
+}
+
+h2 {
+	text-align: center;
+}
+header > h2 {
+	text-align: left;
+	font-size: 1.3rem;
+}
+.bottom-container {
+	background-color: lightgray;
+}
+.store-logo {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+}
+.logo {
+	width: 10rem;
+	margin: 0;
+}
