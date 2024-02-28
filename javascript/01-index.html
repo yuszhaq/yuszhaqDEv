@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Learning</title>
+  <link rel="stylesheet" href="../dist/output.css">
+</head>
+
+<body>
+  <h1 class="bg-red-400">this is a javascript practice</h1>
+  <script>
+    const name = 'Alao';
+    console.log(name);
+    const firstName = 'Sakiru';
+    const lastName = "Alao";
+    const jobTitle = `Web Developer`;
+    const storeName = "Yuszhaq's Store"
+
+    const fullName = firstName + ' ' + lastName;
+    //const about = 'Name :' + firstName + ' ' + lastName + ' ' + ',Job :' + jobTitle;
+    const about = `${fullName} ${jobTitle}`;
+
+    const html = `
+<div>
+Hi there my name is ${fullName}  
+</div>`;
+    console.log(firstName, lastName, jobTitle)
+    console.log(storeName)
+    console.log(fullName)
+    console.log(about)
+    console.log(html)
+    console.log(firstName.length)
+    console.log(firstName[0])
+    console.log(firstName.charAt(1))
+    console.log(firstName.toUpperCase())
+    console.log(firstName.substring(3, 5))
+    console.log(firstName.includes('akiru'))
+  </script>
+</body>
+
+</html>

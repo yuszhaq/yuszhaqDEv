@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nubers</title>
+</head>
+
+<body>
+  <p>numbers</p>
+  <script>
+    //variables
+    let num1 = 4;
+    let num2 = 2;
+    const num3 = 4.5;
+    const num4 = -4.5;
+    const myVar = 'A string';
+    const myVar2 = 'Another string';
+
+    /*Basic math
+    Print out result
+    */
+    console.log(num1 + num2);
+    console.log(num1 - num2);
+    console.log(num1 * num2);
+    console.log(num1 / num2);
+
+    //Floating point inaccuracy
+    console.log(0.1 + 0.2);
+    console.log(0.2 + 0.4);
+
+    //Other operations
+    console.log(13 % 5);
+    console.log(4 % 2);
+    console.log(2 ** 5);
+
+    //Increment and Decrement
+    //num1 = num1 + 1;
+    //num1++
+    //num2--
+
+    /*num1 += 2;
+    num2 -= 2;
+    console.log(num1);
+    console.log(num2)
+    */
+
+    //Comparison
+    console.log(num1 > num2);
+    console.log(num1 >= num2);
+    console.log(num1 < num2);
+    console.log(num1 <= num2);
+    console.log(num1 == num2);
+    console.log(num1 === num2);
+    console.log(num1 != num2);
+    console.log(num1 !== num2)
+
+    //Nan
+    console.log(num1 * 'A string')
+    //Infinity
+    console.log(9_000_000 ** 9_000_000);
+    console.log(Number.NEGATIVE_INFINITY);
+
+    //Math Object
+    console.log(Math.PI);
+    console.log(Math.sqrt(25));
+    console.log(Math.pow(2, 3));
+    console.log(Math.round(6.6));
+    console.log(Math.round(6.3));
+    console.log(Math.ceil(6.3));
+    console.log(Math.floor(6.7));
+
+    //Converting
+
+    console.log(myVar + myVar2);
+    console.log(myVar + 2);
+
+    //String to number
+    console.log('2' + 2);
+    console.log(parseInt('2') + 2);
+
+    //Number to string
+
+    console.log(2 + '');
+    console.log(`${2}`);
+
+    //BigInt - INtroduced ES2020
+    let maxInt = BigInt(Number.MAX_SAFE_INTEGER);
+    console.log(maxInt);
+    maxInt++;
+    console.log(maxInt);
+    maxInt++;
+    console.log(maxInt);
+
+    let bigNumber = 9007199254740993n;
+    bigNumber = bigNumber *= 4n;
+    console.log(bigNumber)
+  </script>
+</body>
+
+</html>
