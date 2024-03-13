@@ -58,12 +58,43 @@ function noSpace(str) {
 	// let newString = '';
 	// for (i = 0; i < str.length; i++) {
 	// 	if (str[i] !== ' ') {
-	// 		newString = newString + str[i];
+	// 		newString += str[i];
 	// 	}
 	// }
 	// return newString;
 
 	return str.split(' ').join('');
 }
-console.log(noSpace('Hello there'));
-console.log(noSpace('I am cool'));
+// console.log(noSpace('Hello there'));
+// console.log(noSpace('I am cool'));
+
+function squareSum(numbers) {
+	// let result = 0;
+
+	// numbers.forEach((number) => {
+	// 	result += number * number;
+	// });
+	// return result;
+
+	return numbers.map((number) => number * number).reduce((previousValue, currentValue) => previousValue + currentValue, 0);
+}
+// console.log(squareSum([1, 2, 3]));
+// console.log(squareSum([3, 5]));
+
+function positivesum(numbers) {
+	// let total = 0;
+	// // for (i = 0; i < numbers.length; i++) {
+	// // 	if (numbers[i] > 0) {
+	// // 		total += numbers[i];
+	// // 	}
+	// // }
+	// numbers.forEach((number) => {
+	// 	if (number > 0) {
+	// 		total += number;
+	// 	}
+	// });
+	// return total;
+	return numbers.filter((number) => number > 0);
+}
+console.log(positivesum([1, 2, -5, 3]));
+console.log(positivesum([3, 2, -4, 5]));

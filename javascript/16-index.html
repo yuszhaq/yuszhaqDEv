@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Woeking with the DOM</title>
+  <style>
+    section {
+      width: 400px;
+      height: 100px;
+      padding: 20px 0 0 10px;
+      background-color: red;
+      color: white;
+    }
+
+    div {
+      background-color: green;
+      color: white;
+      width: 300px;
+      padding: 0 0 0 10px;
+    }
+
+    p {
+      background-color: blue;
+      color: white;
+      margin-top: 0;
+      width: 200px;
+      padding-left: 10px;
+      padding-top: 10px;
+      padding: 10px 0 10px 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    section
+    <div>
+      div
+      <p>
+        p
+      </p>
+    </div>
+  </section>
+  <ul>
+    <li>
+      <span>Go to the stoes</span>
+      <button class="delete-todo"><strong>delete</strong></button>
+    </li>
+    <li>
+      <span>Finish JavaScript screencast</span>
+      <button class="delete-todo"><strong>delete</strong></button>
+    </li>
+    <li>
+      <span>Take over the world</span>
+      <button class="delete-todo"><strong>delete</strong></button>
+    </li>
+  </ul>
+
+  <script>
+    const todoList = document.querySelector('ul');
+    todoList.addEventListener('click', function (event) {
+      // console.log(event.target)
+      const deleteButton = event.target.closest('.delete-todo');
+
+      if (!deleteButton) {
+        return
+      };
+      if (deleteButton.classList.contains('delete-todo')) {
+        console.log('button was clicked')
+      }
+    })
+    // document.querySelectorAll('.delete-todo').forEach(deleteButton => {
+    //   deleteButton.addEventListener('click', function () {
+    //     console.log('delete todo')
+    //   })
+    // });
+    const section = document.querySelector('section');
+    const div = document.querySelector('div');
+    const p = document.querySelector('p');
+
+    section.addEventListener('click', function (event) {
+
+      console.log('section')
+      console.log('event target is', event.target);
+      console.log('event current target is', event.currentTarget);
+    }, true);
+
+    div.addEventListener('click', function (event) {
+
+      console.log('div')
+      console.log('event target is', event.target);
+      console.log('event current target is', event.currentTarget);
+    }, true);
+    p.addEventListener('click', function (event) {
+      // event.stopPropagation()
+      console.log('p')
+      console.log('event target is', event.target);
+      console.log('event current target is', event.currentTarget);
+    }, true);
+
+  </script>
+</body>
+
+</html>

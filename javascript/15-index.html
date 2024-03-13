@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Working withe DOM</title>
+</head>
+
+<body>
+  <h3>Tod List</h3>
+  <ul>
+    <li>
+      <span>Got to store</span>
+      <button class="edit-todo">edit</button>
+    </li>
+    <li>
+      <span>Finish JavaScript screencast</span>
+      <button class="edit-todo">edit</button>
+    </li>
+    <li>
+      <span>Take over the world</span>
+      <button class="edit-todo">edit</button>
+    </li>
+  </ul>
+  <div>
+    <button class="clear-todos">clear all todos</button>
+  </div>
+  <a href="https://laracast.com" class="link">Laracast</a>
+  <form action="sever.php">
+
+    <div>
+      <input type="text" id="firstName" name="firstName" placeholder="First Name" autocomplete="off">
+    </div>
+
+    <div>
+      <select id="cars" name="cars">
+        <option value="Honda">Honda</option>
+        <option value="Toyota">Toyota</option>
+        <option value="Tesla">Tesla</option>
+      </select>
+    </div>
+
+
+    <div>
+      <input type="radio" id="html" name="languages" value="HTML">
+      <label for="html">HTML</label><br>
+      <input type="radio" id="css" name="languages" value="CSS">
+      <label for="html">CSS</label><br>
+      <input type="radio" id="javascript" name="languages" value="JavaScript">
+      <label for="html">JavaScript</label><br>
+    </div>
+
+    <div><button>Submit Form</button></div>
+  </form>
+  <script>
+    const clearButton = document.querySelector('.clear-todos');
+    const link = document.querySelector('.link');
+    const editButtons = document.querySelectorAll('.edit-todo');
+    const myInput = document.querySelector('#firstName');
+    const mySelect = document.querySelector('#cars');
+    const myRadioButtons = document.querySelectorAll('input[name="languages"]');
+    const myForm = document.querySelector('form');
+
+
+    function handleClick(event) {
+      // console.log(event);
+      event.preventDefault();
+      console.log('Clear button was clicked');
+      document.querySelector('h3').textContent = 'CHANGED';
+      clearButton.removeEventListener('click', handleClick)
+    }
+
+    function handleEdit() {
+      console.log('editing todo');
+    }
+    clearButton.addEventListener('click', handleClick);
+    link.addEventListener('click', handleClick);
+    myInput.addEventListener('keyup', function (event) {
+      console.log(event.target.value);
+    })
+    mySelect.addEventListener('change', function (event) {
+      console.log(event.target.value)
+    })
+    // document.body.addEventListener('mousemove', function (event) {
+    //   console.log(event.clientX, event.clientY);
+    // })
+
+    myForm.addEventListener('submit', function (event) {
+      event.preventDefault()
+      console.log('processing the form')
+      myForm.submit();
+    })
+
+    editButtons.forEach(editButton => {
+      editButton.addEventListener('click', handleEdit);
+    });
+
+    myRadioButtons.forEach(radioButton => {
+      radioButton.addEventListener('change', function () {
+        console.log(radioButton.value)
+      });
+    });
+  </script>
+</body>
+
+</html>

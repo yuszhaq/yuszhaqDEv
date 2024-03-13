@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Working with th DOM</title>
+</head>
+
+<body>
+  <ul>
+    <!-- I am a comment -->
+    <li>Go to the store</li>
+    <li>Finish JavaScript screencast</li>
+    <li>Take over world</li>
+    <li class="todo-item flex">
+      <span class="todo-content">Actual to do item</span>
+      <button class="icon">x</button>
+    </li>
+  </ul>
+
+  <script>
+    const li = document.createElement('li');
+    li.classList.add('todoItem');
+    li.setAttribute('id', 'todoItem');
+    li.textContent = 'New Tod item';
+
+    const ul = document.querySelector('ul');
+
+    const li2 = document.createElement('li');
+    // li2.textContent = 'New Tod item Again';
+    li2.append('New Tod item Again');
+
+
+    const image = document.createElement('img');
+    image.src = 'https://picsum.photos/150';
+    image.alt = 'Cool photo';
+
+    // ul.append(li, li2);
+    // ul.insertAdjacentElement('afterend', image);
+
+    const nodeToClone = document.querySelector('.todo-item');
+    const clonedTodItem = nodeToClone.cloneNode(true);
+    clonedTodItem.firstElementChild.textContent = 'Another todo item goes here';
+    ul.append(clonedTodItem);
+
+  </script>
+</body>

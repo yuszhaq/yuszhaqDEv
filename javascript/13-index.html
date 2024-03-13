@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Working with the DOM</title>
+  <style>
+    .heading {
+      font-size: 20px;
+    }
+
+    .heading-large {
+      font-size: 30px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h3 class="heading somethingelse" id="my-heading" style="color: red">Some text</h3>
+  <div>
+    <button id="readSomething">Read Something</button>
+    <button id="updateSomething">Upadate Something</button>
+  </div>
+  <form action="#">
+    <input type="text" id="textInput">
+    <select name="countries" id="countries">
+      <option value="CA">Canada</option>
+      <option value="USA">USA</option>
+      <option value="Mexico">Mexico</option>
+    </select>
+  </form>
+
+  <script>
+    const readButton = document.querySelector('#readSomething');
+    const updateButton = document.querySelector('#updateSomething');
+    const heading = document.querySelector('#my-heading');
+    const textInput = document.querySelector('#textInput');
+    const countries = document.querySelector('#countries');
+
+
+    function readSomething() {
+      console.log('read somethimg');
+      console.log(heading.textContent);
+      console.log(heading.style.color);
+      console.log(heading.className);
+      console.log(heading.classList);
+      console.log(heading.getAttribute('id'));
+      console.log(textInput.value);
+      console.log(countries.value);
+    }
+    function updateSomething() {
+      console.log('update somethimng');
+      heading.textContent = 'Updated text';
+      heading.style.color = 'blue';
+      // heading.classList.add('heading-large')
+      // heading.classList.remove('heading')
+      heading.classList.toggle('hidden')
+      heading.setAttribute('id', 'my-new-heading');
+      textInput.value = 'hardcoded from JS';
+      countries.value = 'USA';
+    }
+
+    readButton.addEventListener('click', readSomething)
+    updateButton.addEventListener('click', updateSomething)
+
+  </script>
+</body>
+
+</html>
