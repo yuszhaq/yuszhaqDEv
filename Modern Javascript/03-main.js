@@ -1,32 +1,76 @@
 'use strict';
 
-let users = [
-	{
-		name: 'Alao',
-		email: 'yuszhaq@gmail.com',
-	},
-	{
-		name: 'Sakiru',
-		email: 'yusplug@gmail.com',
-	},
-];
+// // Initiates an Item class
+// function Item(name, category) {
+// 	this.name = name;
+// 	this.category = category;
+// }
 
-let names = [];
+// // Create a method called getDetaills() for an Item
+// Item.prototype.getDetails = function () {
+// 	return `${this.name} - ${this.category}`;
+// };
 
-// users.forEach(function (user) {
-//   names.push(user.name)
+// // Initialize a PurchasedItem class, inherits the Item class
+// function PurchasedItem(name, category, price) {
+// 	Item.call(this, name, category);
+// 	this.price = price;
+// }
+
+// // Set the inherited methods and properties of the base class
+// PurchasedItem.prototype = Object.create(Item.prototype);
+// PurchasedItem.prototype.constructor = PurchasedItem;
+
+// // Create a new methhod just for the extended PurchasedItem class
+// PurchasedItem.prototype.getDetailsWithPrice = function () {
+// 	return `${this.name} - ${this.category} - $${this.price}`;
+// };
+
+// var item = new Item('Coffee', 'Food');
+// item.category = 'Drinks';
+
+// var PurchasedItem = new PurchasedItem('Sugar', 'Food', '2.49');
+
+class Item {
+	constructor(name, category) {
+		this.name = name;
+		this.category = category;
+	}
+
+	static maxItem = 10;
+
+	static getHelperText() {
+		return 'Add some items to your grocery list';
+	}
+
+	getDetails() {
+		return `${this.name} - ${this.category}`;
+	}
+}
+
+class PurchasedItem extends Item {
+	constructor(name, category, price) {
+		super(name, category);
+		this.price = price;
+	}
+
+	getDetailsWithPrice() {
+		return `${this.name} - ${this.category} - ${this.price}`;
+	}
+
+	static getNumbersOfItems() {
+		return `3 / ${super.maxItem}`;
+	}
+}
+
+// let item = new Item('Coffe', 'Food');
+// item.category = 'Drinks';
+
+// let purchasedItem = new PurchasedItem('Sugar', 'Food', '2.49');
+
+// document.getElementById('output').innerHTML = item.getDetails();
+
+// btn.addEventListener('click', function () {
+// 	document.getElementById('output').innerHTML = purchasedItem.getDetailsWithPrice();
 // });
-
-users.forEach((user) => names.push(user.name));
-
-document.getElementById('output').innerHTML = names.join(', ');
-
-document.getElementById('btn').addEventListener('click', (event) => {
-	const getDetails = () => {
-		console.log(event.currentTarget);
-
-		return `The buttin id is ${event.currentTarget.getAttribute('id')}`;
-	};
-
-	document.getElementById('output').innerHTML = getDetails();
-});
+document.getElementById('output').innerHTML = PurchasedItem.getNumbersOfItems();
