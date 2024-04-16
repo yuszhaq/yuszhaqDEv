@@ -39,7 +39,7 @@
 		calculateItemsRemaining();
 	});
 
-	todoList.addEventListener('click', () => {
+	todoList.addEventListener('click', (event) => {
 		if (event.target.classList.contains('todo-check')) {
 			const todoItemToComplete = event.target.nextElementSibling;
 			todoItemToComplete.classList.toggle('line-through');
