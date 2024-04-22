@@ -36,7 +36,7 @@ a {
 	color: white;
 }
 img {
-	height: 25rem;
+	height: 20rem;
 	border: 2px solid rgb(28, 205, 137);
 	border-radius: 100%;
 }
@@ -66,4 +66,7 @@ span {
 .occupation {
 	font-size: x-large;
 	font-weight: bolder;
+}
+p {
+	margin: 5px;
 }
