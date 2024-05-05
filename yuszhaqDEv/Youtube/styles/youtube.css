@@ -48,7 +48,7 @@ body {
 }
 .side-nav .home {
   margin-top: 1rem;
-  background-color: rgb(226, 220, 220);
+  background-color: #f2f2f2;
 }
 .side-nav a {
   text-decoration: none;
@@ -58,6 +58,9 @@ body {
   padding: 0.4rem 0.7rem;
   border-radius: 0.5rem;
   margin: 0.2rem;
+}
+.side-nav a:hover {
+  background-color: #f2f2f2;
 }
 .side-nav a .fa-tv {
   margin-right: -0.4rem;
@@ -80,18 +83,120 @@ body {
   position: fixed;
   top: 0;
   left: 15rem;
-  height: 8rem;
-  width: calc(95% - 22rem);
+  height: 10rem;
+  background-color: white;
+  width: calc(100% - 15rem);
 }
 .navbar .top-nav {
   display: flex;
   justify-content: space-between;
+  flex: 1;
   padding: 1rem 0;
+  margin-left: 10rem;
+  margin-right: 1rem;
+}
+.navbar .top-nav .search {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 60%;
+}
+.navbar .top-nav .search .search-input {
+  height: 100%;
+  width: 100%;
+  border: 2px solid #f2f2f2;
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  border-radius: 25px;
+}
+.navbar .top-nav .search .search-input input {
+  background-color: transparent;
+  height: 100%;
+  border: none;
+  outline: none;
+  color: black;
+  padding-left: 0.7rem;
+  font-size: 1.1rem;
+  width: 100%;
+}
+.navbar .top-nav .search .search-input .search-icon {
+  background-color: #f2f2f2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.2rem;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.navbar .top-nav .search .search-mic {
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  border-radius: 1.5rem;
+}
+.navbar .top-nav .profile {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 2rem;
+}
+.navbar .top-nav .profile .create-video-icon i, .navbar .top-nav .profile .notification-icon i {
+  font-size: 2rem;
+}
+.navbar .top-nav .profile .notification-icon {
+  position: relative;
+}
+.navbar .top-nav .profile .notification-icon p {
+  background-color: rgb(199, 13, 13);
+  color: white;
+  font-size: 0.8rem;
+  height: 1rem;
+  width: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: -5%;
+  right: -30%;
+}
+.navbar .top-nav .profile .profile-picture {
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar .top-nav .profile .profile-picture img {
+  height: 100%;
+  width: 100%;
+  border-radius: 1.5rem;
+  border: 1px solid gray;
+}
+.navbar .buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.navbar .buttons a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5rem;
+  background-color: #f2f2f2;
+  font-weight: bold;
+  font-size: small;
+  border-radius: 0.2rem;
+}
+.navbar .buttons a:hover {
+  background-color: #ccc2c2;
 }
 
 .container {
-  background-color: green;
-  margin: 10rem 0 0 15rem;
-  height: 100%;
-  width: 100%;
+  margin: 11rem 0 0 15rem;
 }/*# sourceMappingURL=youtube.css.map */
