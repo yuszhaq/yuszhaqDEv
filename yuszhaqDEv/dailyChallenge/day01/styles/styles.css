@@ -22,11 +22,11 @@ main aside {
   background-color: #ee4d38;
   border-radius: 2rem;
   width: 15rem;
-  height: 42rem;
+  height: 50rem;
 }
 main .container {
-  height: 35rem;
-  width: 60rem;
+  height: 43rem;
+  width: 70rem;
   margin-top: -2rem;
   margin-left: -11rem;
   border-radius: 2rem;
@@ -130,6 +130,38 @@ main .container .billing-page .history {
   display: grid;
   grid-template-columns: 4fr 1fr;
   align-items: start;
+}
+main .container .billing-page .history .order-history {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .container .billing-page .history .order-history .history-heading p {
+  font-weight: 900;
+}
+main .container .billing-page .history .order-history .history-heading span {
+  font-size: small;
+}
+main .container .billing-page .history .order-history .history-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+main .container .billing-page .history .order-history .history-content span {
+  font-size: small;
+}
+main .container .billing-page .history .order-history .history-content p {
+  font-weight: bold;
+}
+main .container .billing-page .history .order-history .history-content a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  border: 1px solid rgba(24, 23, 74, 0.2);
+  width: 5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  text-align: left;
 }
 main .container .billing-page .history .plan {
   background-color: #ee4d38;

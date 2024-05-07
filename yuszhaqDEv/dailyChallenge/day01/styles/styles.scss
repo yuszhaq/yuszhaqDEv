@@ -20,11 +20,11 @@ main {
 		background-color: #ee4d38;
 		border-radius: 2rem;
 		width: 15rem;
-		height: 42rem;
+		height: 50rem;
 	}
 	.container {
-		height: 35rem;
-		width: 60rem;
+		height: 43rem;
+		width: 70rem;
 		margin-top: -2rem;
 		margin-left: -11rem;
 		border-radius: 2rem;
@@ -129,6 +129,40 @@ main {
 				grid-template-columns: 4fr 1fr;
 				align-items: start;
 				.order-history {
+					display: flex;
+					flex-direction: column;
+					gap: 2rem;
+					.history-heading {
+						p {
+							font-weight: 900;
+						}
+						span {
+							font-size: small;
+						}
+					}
+					.history-content {
+						display: grid;
+						grid-template-columns: repeat(3, 1fr);
+						gap: 1.5rem;
+						span {
+							font-size: small;
+						}
+						p {
+							font-weight: bold;
+						}
+						a {
+							text-decoration: none;
+							color: inherit;
+							font-weight: bold;
+							border: 1px solid rgb(24, 23, 74, 0.2);
+							width: 5rem;
+							padding: 0.5rem;
+							border-radius: 0.5rem;
+							text-align: left;
+
+							// box-shadow: -0.5px -0.5px 1px 1px rgba(24, 23, 74, 0.5);
+						}
+					}
 				}
 				.plan {
 					background-color: #ee4d38;
