@@ -141,26 +141,102 @@ main {
 						}
 					}
 					.history-content {
-						display: grid;
-						grid-template-columns: repeat(3, 1fr);
-						gap: 1.5rem;
+						width: 32rem;
+						display: flex;
+						flex-direction: column;
+						gap: 0.3rem;
+						.head-content {
+							display: grid;
+							grid-template-columns: repeat(3, 1fr);
+							grid-gap: 6rem;
+							span {
+								font-size: small;
+								text-align: left;
+								&:nth-child(2) {
+									margin-left: -2rem;
+								}
+							}
+						}
+						.row {
+							margin-left: -0.5rem;
+							padding: 0.5rem;
+							border-radius: 0.5rem;
+							display: grid;
+							grid-template-columns: repeat(3, 1fr);
+							grid-gap: 5rem;
+							align-items: center;
+							font-weight: bold;
+							cursor: pointer;
+							&:hover {
+								box-shadow: -1px 1px 2px 1px rgb(24, 23, 74, 0.2);
+							}
+							p {
+								&:nth-child(2) {
+									margin-left: -1.6rem;
+								}
+							}
+							a {
+								text-decoration: none;
+								color: inherit;
+								border: 1px solid rgb(24, 23, 74, 0.2);
+								width: 5rem;
+								padding: 0.5rem;
+								border-radius: 0.5rem;
+								text-align: center;
+								margin-left: 1rem;
+							}
+						}
+						.last-row {
+							font-weight: bold;
+							text-decoration: underline;
+							color: #ee4d38;
+							cursor: pointer;
+						}
+					}
+					.footer {
+						margin-top: 2rem;
+						margin-bottom: 1rem;
+						.payment-heading {
+							font-weight: 900;
+						}
 						span {
 							font-size: small;
 						}
-						p {
-							font-weight: bold;
-						}
-						a {
-							text-decoration: none;
-							color: inherit;
-							font-weight: bold;
-							border: 1px solid rgb(24, 23, 74, 0.2);
-							width: 5rem;
-							padding: 0.5rem;
-							border-radius: 0.5rem;
-							text-align: left;
-
-							// box-shadow: -0.5px -0.5px 1px 1px rgba(24, 23, 74, 0.5);
+						.payment-section {
+							margin-top: 1rem;
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+							.payment-option {
+								display: flex;
+								gap: 0.5rem;
+								.visa-icon {
+									font-size: 3.5rem;
+									place-content: center;
+									height: 2rem;
+									padding: 0.5rem 0.5rem 0;
+									border-radius: 0.3rem;
+									color: #002298;
+									border: 1px solid rgb(24, 23, 74, 0.2);
+								}
+								.visa-info {
+									margin-top: 0.5rem;
+									font-size: small;
+									font-weight: bold;
+									color: #222152;
+								}
+							}
+							.remove-button {
+								text-decoration: none;
+								font-weight: bold;
+								color: inherit;
+								border: 1px solid rgb(24, 23, 74, 0.2);
+								width: 4rem;
+								padding: 0.5rem;
+								border-radius: 0.5rem;
+								text-align: center;
+								margin-right: 3rem;
+							}
 						}
 					}
 				}
