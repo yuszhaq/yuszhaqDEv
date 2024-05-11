@@ -15,7 +15,8 @@ body {
 main {
   display: flex;
   align-items: center;
-  justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
   padding: 2rem;
 }
 main aside {
