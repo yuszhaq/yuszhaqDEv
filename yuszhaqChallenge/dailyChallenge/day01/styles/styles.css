@@ -10,6 +10,7 @@ body {
   background-color: #e6e6fb;
   color: #18174a;
   height: 100vh;
+  width: 100%;
 }
 
 main {
@@ -17,6 +18,8 @@ main {
   align-items: center;
   width: -moz-fit-content;
   width: fit-content;
+  margin: auto;
+  height: 100%;
   padding: 2rem;
 }
 main aside {
