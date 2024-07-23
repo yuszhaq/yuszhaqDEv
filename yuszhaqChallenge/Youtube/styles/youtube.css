@@ -87,6 +87,7 @@ body {
   height: 10rem;
   background-color: white;
   width: calc(100% - 22rem);
+  z-index: 100;
 }
 .navbar .top-nav {
   display: flex;
